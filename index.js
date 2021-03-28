@@ -7,12 +7,6 @@ import {
 } from "./helpers/apiResponse.js";
 import cors from "cors";
 import mongoose from "mongoose";
-import dotenv from "dotenv";
-const result = dotenv.config();
-
-if (result.error) {
-  throw result.error;
-}
 
 const { connect } = mongoose;
 const { json, urlencoded } = express;
