@@ -46,13 +46,9 @@ export const userLogin = [
               };
               const jwtPayload = userData;
               const jwtData = {
-                expiresIn: process.env.JWT_TIMEOUT_DURATION,
+                expiresIn: 86400,
               };
-              userData.token = sign(
-                jwtPayload,
-                process.env.JWT_SECRET,
-                jwtData
-              );
+              userData.token = sign(jwtPayload, "7032300186", jwtData);
               return successResponseWithData(res, "Login Success.", userData);
             }
           } else {

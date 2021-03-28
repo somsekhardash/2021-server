@@ -18,7 +18,8 @@ const { connect } = mongoose;
 const { json, urlencoded } = express;
 const port = 3000;
 
-var MONGODB_URL = process.env.MONGODB_URL;
+var MONGODB_URL =
+  "mongodb+srv://boss:boss123@cluster0.ho84f.mongodb.net/cricket?retryWrites=true&w=majority";
 console.log(MONGODB_URL);
 
 connect(MONGODB_URL, { useNewUrlParser: true, useUnifiedTopology: true })
