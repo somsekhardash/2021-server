@@ -1,7 +1,7 @@
 import express from "express";
-import path from "path";
+// import path from "path";
 
-var __dirname = path.resolve();
+// var __dirname = path.resolve();
 const { Router } = express;
 import {
   getTournaments,
@@ -20,15 +20,15 @@ import {
   UserDelete,
 } from "../controllers/UserController.js";
 
-const DIST_DIR = path.join(__dirname, "./../../ui/dist");
-const HTML_FILE = path.join(DIST_DIR, "index.html");
+// const DIST_DIR = path.join(__dirname, "./../../ui/dist");
+// const HTML_FILE = path.join(DIST_DIR, "index.html");
 const router = Router();
 // app.get("/", (_req, res) => {
 //   res.sendFile(HTML_FILE);
 // });
 
 router.get("/", (_req, res) => {
-  res.sendFile(HTML_FILE);
+  res.send("Hello");
 });
 
 router.get("/get-tournaments", getTournaments);
